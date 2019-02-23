@@ -4,14 +4,14 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import {HomeScreen,DetailsScreen} from '../screens/HomeScreen';
-import ExploreScreen from '../screens/explore';
+import {ExploreScreen,cardDetails} from '../screens/explore';
 import SettingsScreen from '../screens/SettingsScreen';
 
   
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
-  Details: DetailsScreen,
+  DetailsScreen: DetailsScreen,
 
 });
 
@@ -31,6 +31,7 @@ HomeStack.navigationOptions = {
 
 const ExploreStack = createStackNavigator({
   explore: ExploreScreen,
+  cardDetails : cardDetails
 });
 
 ExploreStack.navigationOptions = {

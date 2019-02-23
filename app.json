@@ -23,7 +23,14 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier":"com.pk.ios",
       "supportsTablet": true
+    },
+    "android": {
+      "package":"com.pk.android",
+      "permissions": [
+        ""
+      ]
     }
   }
 }

@@ -10,7 +10,9 @@ import AppNavigator from './navigation/AppNavigator';
 
 ////////////////////Screen imports/////////////////////////
 import Login from './screens/login';
-import ExploreScreen from './screens/explore';
+// import ExploreScreen from './screens/explore';
+
+import ExploreScreen from './screens/testpage';
 
 export default class App extends React.Component {
 
@@ -40,8 +42,9 @@ export default class App extends React.Component {
       return (
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <ExploreScreen/>
-          {/* <AppNavigator /> */}
+          {/* <ExploreScreen/> */}
+          {/* <DetailsScreen /> */}
+          <AppNavigator />
         </View>
       );
     }

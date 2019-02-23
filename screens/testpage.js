@@ -1,88 +1,3 @@
-// import React from 'react';
-// import {
-//   Image,
-//   Platform,
-//   ScrollView,
-//   StyleSheet,
-//   Text,
-//   TouchableOpacity,
-//   View,
-//   Button,
-// } from 'react-native';
-// import { createAppContainer, createStackNavigator,createSwitchNavigator, StackActions, NavigationActions } from 'react-navigation'; // Version can be specified in package.json
-
-// import { WebBrowser } from 'expo';
-
-// import { MonoText } from '../components/StyledText';
-
-// // export class HomeScreen extends React.Component {
-// //   static navigationOptions = {
-// //     header: null,
-// //   };
-
-// //   render() {
-// //     // return (
-// //     //   <View style={styles.container}>
-// //     //     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-// //     //       <Text> Home Screen</Text>
-// //     //     </ScrollView>
-
-// //     //   </View>
-// //     // );
-
-// //     return (
-      
-// //       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-// //         <Text>Details Screen</Text>
-// //       </View>
-// //     );
-// //   }
-// // }
-
-
-
-// export class HomeScreen extends React.Component {
-//   static navigationOptions = {
-//     title: 'HOme',
-//   };
-
-//   render() {
-//     return (
-//       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//         <Text>Home Screen</Text>
-//         <Button
-//           title="Go to Explore"
-//           onPress={() => this.props.navigation.navigate('Details')}
-//         />
-//       </View>
-//     );
-//   }
-// }
-
-//  export class DetailsScreen extends React.Component {
-//   render() {
-//     return (
-//       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//         <Text>Details Screen</Text>
-//       </View>
-//     );
-//   }
-// }
-
-// // export default {
-//   // HomeScreen,
-//   // DetailsScreen,
-// // }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     paddingTop: 15,
-//     backgroundColor: '#fff',
-//   },
-// });
-
-
 import React from 'react';
 import {  Card, ListItem, Button, Icon ,Avatar,SocialIcon, Rating, AirbnbRating} from 'react-native-elements';
 import { Text, View, StyleSheet,ActivityIndicator,ScrollView,Image,TouchableHighlight,
@@ -91,9 +6,9 @@ import { MapViewAnimated } from 'react-native-maps';
 
 
 
-export class HomeScreen extends React.Component {
+export class ExploreScreen extends React.Component {
   static navigationOptions = {
-    title: 'HOme',
+    title: 'Explore',
   };
 
   constructor(props) {
@@ -109,7 +24,7 @@ export class HomeScreen extends React.Component {
                     let index = 0;
                     var cards =   
                     <View>
-                    <TouchableOpacity  onPress={() => this.props.navigation.navigate('DetailsScreen')}>
+                    <TouchableOpacity  onPress={() => this.props.navigation.navigate('cardDetails')}>
 
                     <View style={{alignItems:"center",marginTop: 30}}> 
 
@@ -134,7 +49,7 @@ export class HomeScreen extends React.Component {
                               name='heart'
                               type='font-awesome'
                               color='#f50'
-                              // onPress={() => this.props.navigation.navigate('cardDetails')}
+                              onPress={() => this.props.navigation.navigate('cardDetails')}
 
                               />
                             <Text style={{color:'white',justifyContent:"center"}}> 89%</Text>
@@ -259,7 +174,7 @@ const styles = StyleSheet.create({
 
 //////////////page 2/////////////////
 
-export class DetailsScreen extends React.Component {
+export class cardDetails extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',backgroundColor:"#efefef" }}>
@@ -268,4 +183,3 @@ export class DetailsScreen extends React.Component {
     );
   }
 }
-
